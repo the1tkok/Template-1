@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-sizing: border-box;
+}
+
+.html {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: darkgray;
+}
+
+a {
+    color: black;
+    
+}
+
+.body {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-basis: 100%;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 100%;
+    height: 15%;
+    background-color: white;
+    gap: 10%;
+}
+
+.logo {
+    display: flex;
+    align-self: center;
+    flex-basis: 10%;
+    font-size: 2.5vw;
+    cursor: pointer;
+}
+
+.logo:hover {
+    border: 5px solid rgb(22, 22, 22);
+}
+
+.logo:hover {
+    border-right: 50px solid black;
+    transition-duration: 70ms;
+}
+
+.nav {
+    display: flex;
+    flex-basis: 67%;
+}
+
+.nav-item-list {
+    display: flex;
+    gap: 10%;
+    flex-basis: 100%;
+    
+}
+
+.nav-item-1, .nav-item-2, .nav-item-3 {
+    display: flex;
+    align-self: center;
+    color: black;
+    font-size: 1.2vw;
+
+}
+
+.search {
+    display: flex;
+    height: 30%;
+    width: 30%;
+    align-self: center;
+    font-size: 1.5vw;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    font-weight: normal;
+    padding-left: 2.5%;
+}
+
+.body-content-1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-basis: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 11.5%;
+    gap: 8%;
+    height: 40.5%;
+    background-color: rgb(78, 153, 197);
+}
+
+.body-content-1-ext {
+    display: flex;
+    flex-basis: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2%;
+    height: 4%;
+    background-color: rgb(78, 153, 197);
+}
+
+.circle-1, .circle-2, .circle-3, .circle-4 {
+    display: flex;
+    width: 0.7vw;
+    height: 0.7vw;
+    border-radius: 100%;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.circle-1:hover{
+    background-color: white;
+}
+
+.content-title-1 {
+    color:rgb(36, 36, 36);
+    width: 40%;
+    font-size: 2.5vw;
+}
+
+.content-paragraph-1 {
+    width: 40%;
+    font-size: 1.2vw;
+}
+
+.learn-more {
+    border: none;
+    width: 15%;
+    height: 15%;
+    border-radius: 1%;
+    cursor: pointer;
+    background-color: rgb(0, 57, 180);
+    color: white;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.body-content-2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    justify-content: center;
+    align-content: center;
+    height: 42.5%;
+    background-color: rgb(44, 44, 44);
+    gap: 16%;
+    color: white;
+}
+
+
+.feature-1, .feature-2, .feature-3 {
+    display: flex;
+    width: 10vw;
+    height: 10vw;
+    background-color: darkgray;
+    border-radius: 1vw;
+}
+
+.container-1, .container-2, .container-3 {
+    width: 15%;
+    height: auto;
+}
+
+.feature-1-desc, .feature-2-desc, .feature-3-desc {
+    font-size: 1.1vw;
+    margin-bottom: 5%;
+
+}
+
+.feature-1-text, .feature-2-text, .feature-3-text {
+    font-weight: bold;
+    font-size: 1.2vw;
+    margin-top: 12%;
+    margin-bottom: 5%;
+}
+
+.read-more {
+    font-size: 1.1vw;
+    color: lightskyblue;
+    text-decoration-line: underline;
+}
+
+/* HTML SLIDER */
+
+.slider-container {
+    /*background: linear-gradient(149deg, rgb(247, 0, 255) 0%, rgb(255, 145, 0) 100%);*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42.5%;
+    width: 100%;
+}
+/*
+.slider {
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+}
+*/
+.slides {
+    display: flex;
+    overflow-x: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    height: 100%;
+}
+
+.slide:nth-of-type(even) {
+    background-color: rgb(250, 246, 212);
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    margin-right: 0px;
+    box-sizing: border-box;
+    background: white;
+    transform-origin: center center;
+    transform: scale(1);
+    scroll-snap-align: center;
+}
+
+.slide_text {
+    display: flex;
+    flex-basis: 25%;
+    font-size: 1.5vw;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+/*
+.slide a {
+    position: absolute;
+    top: 48%;
+    width: 35px;
+    height: 35px;
+    border: solid black;
+    border-width: 0 4px 4px 0;
+    padding: 3px;
+    box-sizing: border-box;
+}
+*/
+/*
+a.slide_prev {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left: 5%;
+}
+
+a.slide_next {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: 5%;
+}
+*/
+.slider {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 0px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide a {
+    background: none;
+    border: none;
+}
+/*
+a.slide_prev, .slider::before {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left: 5%;
+}
+
+a.slide_next, .slider::after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: 5%;
+}
+
+.slider::before,
+.slider::after,
+.slide_prev,
+.slide_next {
+    position: absolute;
+    top: 48%;
+    width: 2vw;
+    height: 2vw;
+    border: solid black;
+    border-width: 0 4px 4px 0;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.slider::before,
+.slider::after {
+    content: '';
+    z-index: 1;
+    background: none;
+    background-color: black;
+    pointer-events: none;
+}
+*/
+.slider_nav {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    text-align: center;
+}
+
+.slider_navlink {
+    display: inline-block;
+    height: 1vw;
+    width: 1vw;
+    border-radius: 50%;
+    background-color: darkgray;
+    margin: 0 10px 0 10px;
+}
+
+.slider_navlink:focus {
+    background-color: white;
+}
